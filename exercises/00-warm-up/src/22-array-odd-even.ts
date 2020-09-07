@@ -1,6 +1,19 @@
 export {};
 
-function goThroughNumbers(start, end) {}
+function goThroughNumbers(start, end) {
+    if (start < end) {
+        for(let i = start; i <= end; i++){
+            if(i%2 === 0){
+                console.log(i + ' - even')
+            } else {
+                console.log(i + ' - odd')
+            }
+        }
+    } else {
+        console.log('invalid input');
+    }
+    
+}
 
 goThroughNumbers(3, 7);
 /* Expected output:

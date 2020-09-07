@@ -1,14 +1,30 @@
 export {};
 
-function add() {}
+function add(...n) {
+    return n.reduce((previous, current) => {
+      return previous + current;
+    });
+  }
 
-function subtract() {}
+function subtract(...n) {
+    return n.reduce((previous, current) => {
+        return previous - current;
+      });
+    }
 
-function sum() {}
+function sum(arr) {
+    const sum = arr.reduce((acc, i) => acc+i);
+    return sum;
+}
 
-function multiply() {}
+function multiply(arr) {
+    const mult = arr.reduce((acc, i) => acc*i);
+    return mult;
+}
 
-function power() {}
+function power(a,b) {
+    return Math.pow(a,b);
+}
 
 console.log(add(1, 2)); // Expected output: 3
 console.log(subtract(1, 2)); // Expected output: -1
