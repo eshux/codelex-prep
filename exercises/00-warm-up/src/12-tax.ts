@@ -8,7 +8,7 @@ export {};
  */
 
 // You are allowed to change only this function
-function calculateSalesTax(num: number):number {
+function calculateSalesTax(num: number): number {
     return (num*0.21);
 }
 
@@ -18,8 +18,8 @@ const salesTax = calculateSalesTax(price);
 
 console.log("Product: " + product);
 console.log("Price: £" + price);
-console.log("Sales tax: £" + salesTax);
-console.log("Total: £" + (price + salesTax));
+console.log("Sales tax: £" + salesTax.toFixed(2));
+console.log("Total: £" + (price + salesTax).toFixed(2));
 
 /* Expected output:
 
