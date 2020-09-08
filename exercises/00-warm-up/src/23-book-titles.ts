@@ -13,7 +13,7 @@ const books = [
 
 const getTheTitles = arr => {
 const newArr = [];
- for(let i = 0; i < arr.length; i++){
+ for (let i = 0; i < arr.length; i++) {
     newArr.push(arr[i].title);
   }
   return newArr;

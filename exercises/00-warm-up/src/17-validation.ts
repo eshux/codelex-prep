@@ -15,13 +15,15 @@ function validate(num) {
 
   if (typeof num === 'number') {
     if(num % 1 === 0){
-      if(excludedNums.every(i => i !== num)){
+      if(excludedNums.every(i => i !== num)) {
         return true;
-  }else {
-    return false;
-  }} else {
-    return false;
-  }} else {
+      } else {
+        return false;
+      }
+    } else {
+      return false;
+    }
+  } else {
     return false;
   }
 }

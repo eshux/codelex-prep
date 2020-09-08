@@ -8,8 +8,8 @@ export {};
  */
 
 // You are allowed to change only this function
-function calculateSalesTax(num) {
-    return num*0.21;
+function calculateSalesTax(num: number):number {
+    return (num*0.21);
 }
 
 const product = "You don't know JS";

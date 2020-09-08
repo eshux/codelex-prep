@@ -2,8 +2,8 @@ export {};
 
 function goThroughNumbers(start, end) {
     if (start < end) {
-        for(let i = start; i <= end; i++){
-            if(i%2 === 0){
+        for (let i = start; i <= end; i++) {
+            if (i%2 === 0) {
                 console.log(i + ' - even')
             } else {
                 console.log(i + ' - odd')
