@@ -10,6 +10,20 @@
  * isEven(3) === false
  */
 
-function isEven(n: number) {}
+function isEven(n: number) {
+
+    // let i = 0;
+
+    // while (i <= n ) {
+    //     if (i === n) {
+    //         return true;
+    //     } else {
+    //         i += 2;
+    //     }  
+        
+    // }
+    // return false;
+
+}
 
 export { isEven };
