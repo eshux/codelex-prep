@@ -10,25 +10,32 @@ export {};
  */
 
 // You are allowed to change this function
-function convertToUSD(price) {
-    let res = price*1.4;
-    return format(res - fee(res));
-}
-// You are allowed to change this function
-function convertToBRL(price) {
-    let res = price*7;
-    return format(res - fee(res));
+
+const USD_RATE = 1.4
+const BRL_RATE = 6.93
+const FEE = 1.01
+
+const convertTo = (price, currency, fee) => {
+    return (price * currency) * fee;
 }
 
-const format = num => num.toFixed(2);
+// function convertToUSD(price) {
+//     return (price * 1.4) * 1.01;
 
-const fee = num => num*0.01;
+// }
+// // You are allowed to change this function
+// function convertToBRL(price) {
+//     return (price * 6.93) * 1.01;
+
+// }
     
 
 const product = "You don't know JS";
 const price = 12.5;
-const priceInUSD = convertToUSD(price);
-const priceInBRL = convertToBRL(price);
+const priceInUSD = convertTo(price, USD_RATE, FEE);
+const priceInBRL = convertTo(price, BRL_RATE, FEE);
+// const priceInUSD = convertToUSD(price);
+// const priceInBRL = convertToBRL(price);
 
 console.log("Product: " + product);
 console.log("Price: $" + priceInUSD);
