@@ -13,11 +13,18 @@
  */
 
 function reverse(int: number) {
-    let str = int.toString();
-    const arr = str.split("").reverse().join('');
-    arr.replace(/^[0+]/, '');
-    return arr;
-       // const newArr = arr.map
+    const neg = int >= 0;
+    const reversed = parseInt(
+        int
+            .toString()
+            .split("")
+            .reverse()
+            .join('')
+    )
+
+    if (neg) {
+        return reversed
+    } return reversed * -1;
 
 }
 
