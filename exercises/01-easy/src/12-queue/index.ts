@@ -13,7 +13,9 @@
  */
 
 class Queue {
-  add(n: number) {}
+  add(n: number) {
+
+  }
 
   remove() {}
 }

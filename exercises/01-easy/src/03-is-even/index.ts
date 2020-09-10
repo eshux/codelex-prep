@@ -10,32 +10,13 @@
  * isEven(3) === false
  */
 
+const ODD_DIGITS = [1, 3, 5, 7, 9]
+
 function isEven(n: number) {
 
-    if (n > 0) {
-        let i = 0;
-        while (i <= n ) {
-          if (i === n) {
-              return true;
-          } else {
-              i += 2;
-          }   
-        }
-        return false;
-    
-    } else if (n < 0) {
-        let i = 0;
-        while (i >= n ) {
-          if (i === n) {
-              return true;
-          } else {
-              i -= 2;
-          }   
-        }
-        return false;
-    } else {
-        return null;
-    }
-}
+const str = n.toString().split('')[0];
+const lastDigit = Number(str.slice(-1))
 
+return !ODD_DIGITS.includes(lastDigit)
+}
 export { isEven };

@@ -11,21 +11,16 @@
 
 function maxChar(str: string) {
     const strArr = str.split("").sort();
-    const arr = [];
-  
-    // let i = 0;
-    // while (i < strArr.length) {
-    //   if (strArr.charAt(0) === strArr.charAt(0+1)) {
-    //     arr.push(strArr.charAt(0));
-    //   }
-    //   i++;
-    // }
-  
-    for (let i = 0; i < strArr.length; i++) {
-      if (strArr[i] === strArr[i + 1] || strArr[i] === strArr[i - 1]) {
-        arr.push(strArr[i]);
+    let mostChar = strArr[0];
+    let char = 0;
+    strArr.forEach((i) => {
+      const count = strArr.filter(j => j === i).length;
+      if (count > char) {
+        mostChar = i;
+        char = count;
       }
-    }
+    })
+  return mostChar;
 }
 
 export { maxChar };
