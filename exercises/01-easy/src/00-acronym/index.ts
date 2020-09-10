@@ -19,7 +19,9 @@ for (let i = 0; i < arr.length; i++) {
     }
 
 return acron.join('').toUpperCase();
-
+/* const words = input.split(/ |-|_/);
+    return words.map((w) => w.charAt(0).toUpperCase()).join('');
+*/
 }
 
 export { parse };
