@@ -12,18 +12,30 @@
 
 function isEven(n: number) {
 
-    // let i = 0;
-
-    // while (i <= n ) {
-    //     if (i === n) {
-    //         return true;
-    //     } else {
-    //         i += 2;
-    //     }  
-        
-    // }
-    // return false;
-
+    if (n > 0) {
+        let i = 0;
+        while (i <= n ) {
+          if (i === n) {
+              return true;
+          } else {
+              i += 2;
+          }   
+        }
+        return false;
+    
+    } else if (n < 0) {
+        let i = 0;
+        while (i >= n ) {
+          if (i === n) {
+              return true;
+          } else {
+              i -= 2;
+          }   
+        }
+        return false;
+    } else {
+        return null;
+    }
 }
 
 export { isEven };
