@@ -6,7 +6,7 @@ export {};
  * https://en.wikipedia.org/wiki/Pythagorean_theorem
  */
 
-const pythagoreanTheorem = () => {};
+const pythagoreanTheorem = (a: number, b: number) => (Math.sqrt((a * a) + (b * b)));
 
 console.log(pythagoreanTheorem(2, 4)); // Expected result: 4.47213595499958
 console.log(pythagoreanTheorem(3, 4)); // Expected result: 5

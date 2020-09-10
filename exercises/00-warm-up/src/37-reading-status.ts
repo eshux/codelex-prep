@@ -18,7 +18,15 @@ const library = [
   }
 ];
 
-const showStatus = () => {};
+const showStatus = (arr): void => {
+  arr.forEach(i => {
+    if (i.isRead) {
+      console.log(`Already read ${i['title']} by ${i['author']}.`)
+    } else {
+      console.log(`You still need to read ${i['title']} by ${i['author']}.`)
+    }
+  })  
+};
 
 showStatus(library);
 
