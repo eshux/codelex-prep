@@ -22,6 +22,27 @@
  * Resulting in 9 steps. So for input n = 12, the return value would be 9.
  */
 
-function steps(n: number) {}
+function steps(n: number): any {
+    const step = [];
+    let x = n;
+    let i = n;
+    if (x > 0) {
+        while (i > 1) {
+            if (x % 2 === 0) {
+                x /= 2;
+                step.push(x);
+                i /= 2;
+            } else if (x % 2 === 1) {
+                x = x * 3 + 1;
+                step.push(x);
+                i = i * 3 + 1;
+            }
+        
+        } 
+        return step.length;
+    } else {
+        throw new Error('Only positive numbers are allowed')
+    }
+}
 
 export { steps };
