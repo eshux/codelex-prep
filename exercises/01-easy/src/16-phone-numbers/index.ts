@@ -28,10 +28,16 @@
  */
 
 class PhoneNumber {
-  constructor(input: string) {}
+  constructor(input: string) {
+  
+  }
 
-  number() {
-    return "";
+  number(numb: string) {
+    const newN = numb.replace(/[!£$%^&*+_-]/g,' ');
+    const arr = newN.split('').join('');
+
+  
+    return arr;
   }
 }
 
