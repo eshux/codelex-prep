@@ -11,17 +11,26 @@
 
 class Words {
   count(str: string) {
-    const arr = str.split(' ');
+    const arr = str.toLowerCase().replace(/\s+/g, ' ').split(' ');
 
-    arr.forEach(word => {
-      let count = 2;
-      return `${word}: ${count}`;
-      
-    });
-  
+    let resultObj: any = {};
+    
+    arr.forEach(i => {
+      let count = 0;
+      arr.forEach(j => {
+        if (i === j) {
+        count++
+        }
+      })
+      resultObj[i] = count;
+    })
 
-
-
+   if ('' in resultObj) {
+    delete resultObj[''];
+   } 
+   
+   return resultObj;
+    
   }
 }
 
