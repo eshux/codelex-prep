@@ -13,11 +13,18 @@
  */
 
 class Queue {
-  add(n: number) {
 
+
+  add(n: number) {
+    let x = n;    
   }
 
-  remove() {}
+  remove() {
+    let y = 0
+    y++;
+    return y;
+  }
+
 }
 
 export { Queue };
