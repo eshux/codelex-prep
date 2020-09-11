@@ -10,7 +10,20 @@
  */
 
 class Words {
-  count(str: string) {}
+  count(str: string) {
+    const arr = str.split(' ');
+
+    arr.forEach(word => {
+      let count = 2;
+      return `${word}: ${count}`;
+      
+    });
+  
+
+
+
+  }
 }
+
 
 export { Words };
