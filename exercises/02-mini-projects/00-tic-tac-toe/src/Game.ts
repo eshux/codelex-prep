@@ -2,7 +2,7 @@ export type XO = "X" | "O" | "-";
 
 export class Game {
   getCells(): XO[] {
-    return ["X", "-", "-", "-", "-", "-", "-", "-", "-"];
+    return ["-", "-", "-", "-", "-", "-", "-", "-", "-"];
   }
 
   getTurn(): XO {
@@ -19,6 +19,7 @@ export class Game {
 
   onClick(i: number): void {
     console.log(`cell ${i} clicked`);
+   
   }
 
   restart(): void {
