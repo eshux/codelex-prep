@@ -8,10 +8,15 @@ export class Grid {
     this.configuration = configuration;
   }
 
+  apples: {
+    
+  }
   seed(): void {}
 
   isAppleInside(cell: Cell): boolean {
-    return false;
+
+    return this.apples.find(it => it.x === cell.x && it.y === cell.y) !== undefined;
+  
   }
 
   removeApple(cell: Cell): void {}
@@ -25,7 +30,8 @@ export class Grid {
       new Cell(33, 22),
       new Cell(35, 22),
       new Cell(37, 22),
-      new Cell(39, 22)
+      new Cell(39, 22),
+      new Cell(41, 22)
     ];
   }
 }

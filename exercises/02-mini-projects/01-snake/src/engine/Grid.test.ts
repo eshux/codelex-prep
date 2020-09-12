@@ -21,4 +21,13 @@ describe("Grid", () => {
 
     expect(apples.length).toBe(5);
   });
+
+  it("should check if apple is inside", () => {
+    const grid = new Grid(configuration);
+
+    const apples = grid.getApples();
+
+    expect(grid.isAppleInside(apples[0])).toBeTruthy();
+    expect(apples.length).toBe(5);
+  });
 });
