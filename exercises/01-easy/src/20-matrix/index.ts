@@ -38,6 +38,7 @@ class Matrix {
   constructor(private matrix: string) {}
 
   get rows() {
+    
     return [];
   }
 

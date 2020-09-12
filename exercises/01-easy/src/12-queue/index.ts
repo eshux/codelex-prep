@@ -13,16 +13,15 @@
  */
 
 class Queue {
+  items: number[] = [];
 
 
-  add(n: number) {
-    let x = n;    
+  add(n: number): void {
+    this.items.push(n);    
   }
 
-  remove() {
-    let y = 0
-    y++;
-    return y;
+  remove():number | undefined {
+    return this.items.shift();
   }
 
 }
