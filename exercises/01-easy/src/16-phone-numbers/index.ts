@@ -28,16 +28,31 @@
  */
 
 class PhoneNumber {
+  input: string;
+
   constructor(input: string) {
-  
+    this.input = input;
   }
 
-  number(numb: string) {
-    const newN = numb.replace(/[!£$%^&*+_-]/g,' ');
-    const arr = newN.split('').join('');
+  number() {
+    const numb = this.input.replace(/[!£$%@:.() ^&*+_-a-z]/g,'');
 
-  
-    return arr;
+      if (numb.length === 11 &&
+          numb.charAt(0) === '1' &&
+          numb.charAt(4) !== '0' &&
+          numb.charAt(4) !== '1' &&
+          numb.charAt(1) !== '0' &&
+          numb.charAt(1) !== '1') {
+          return numb.substring(1);
+      } else if (numb.length === 10 &&
+          numb.charAt(0) !== '0' &&
+          numb.charAt(0) !== '1' &&
+          numb.charAt(3) !== '0' &&
+          numb.charAt(3) !== '1') {
+          return numb;
+      } else {
+          return null;
+      }
   }
 }
 
