@@ -35,12 +35,23 @@
  */
 
 class Matrix {
-  constructor(private matrix: string) {}
+  constructor(private matrix: string) {
+    this.matrix = matrix;
+  }
 
   get rows() {
-    
-    return [];
-  }
+    const r = this.matrix.split('\n');
+
+    const s = r.map(it => it = it.split(' ')
+    );
+
+    for (let i = 0; i < s.length; i++) {
+      for (let j = 0; j < s[i].length; j++) {
+        s[i][j] = parseInt(s[i][j])
+      }
+    }
+    return s;
+    }
 
   get columns() {
     return [];
