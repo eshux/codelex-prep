@@ -99,4 +99,27 @@ describe("Tic-Tac-Toe", () => {
     expect(game.getWinner()).toBe("O");
     expect(game.isTie()).toBe(false);
   });
+
+  it("Tie", () => {
+    const game = new Game();
+
+    game.onClick(1);
+    game.onClick(0);
+    game.onClick(8);
+    game.onClick(5);
+    game.onClick(4);
+    game.onClick(6);
+    game.onClick(3);
+    game.onClick(7);
+    game.onClick(2);
+
+    expect(game.getCells()).toEqual([
+      "O", "X", "X",
+      "X", "X", "O",
+      "O", "O", "X"
+    ]);
+    // expect(game.getTurn()).toBe("O");
+    // expect(game.getWinner()).toBe("-");
+    expect(game.isTie()).toBe(true);
+  });
 });
