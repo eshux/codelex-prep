@@ -41,20 +41,41 @@ class Matrix {
 
   get rows() {
     const r = this.matrix.split('\n');
+    const rowArr: any[][] = r.map(it => it.split(' '));
 
-    const s = r.map(it => it = it.split(' ')
-    );
-
-    for (let i = 0; i < s.length; i++) {
-      for (let j = 0; j < s[i].length; j++) {
-        s[i][j] = parseInt(s[i][j])
+    // convert strings to numbers
+    for (let i = 0; i < rowArr.length; i++) {
+      for (let j = 0; j < rowArr[i].length; j++) {
+        rowArr[i][j] = Number(rowArr[i][j])
       }
     }
-    return s;
+
+    return rowArr;
     }
 
   get columns() {
-    return [];
+    const newCol = this.rows;
+    let newSubArrLength = newCol.length;
+    let newArrLength = newCol[0].length;
+    const arr = [];
+    const grouped = [];
+    
+    // new sorted array
+    for (let i = 0; i < newArrLength; i++) {
+      let k = 0;    
+      for (k = 0; k < newSubArrLength; k++) {
+        arr.push(newCol[k][i]);       
+      }
+    }
+
+    // new grouped array
+    let i = 0;
+    while (i < arr.length) {
+        grouped.push(arr.slice(i, i += newSubArrLength));
+    }
+
+    return grouped;
+    
   }
 }
 
