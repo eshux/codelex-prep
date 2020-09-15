@@ -72,6 +72,7 @@ class Matrix {
     let i = 0;
     while (i < arr.length) {
         grouped.push(arr.slice(i, i += newSubArrLength));
+        
     }
 
     return grouped;
