@@ -64,4 +64,6 @@ describe("Snake", () => {
         snake.setDirection('Up');
         expect(snake.getDirection()).toBe('Up');
     })
+
+    
 })

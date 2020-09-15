@@ -45,7 +45,7 @@ export class Snake {
   }
 
   getDirection(): Direction {
-    return "Right";
+    return this.direction;
   }
 
   getTail(): Cell[] {

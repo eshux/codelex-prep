@@ -1,5 +1,6 @@
 import { Grid } from "./Grid";
 import { Configuration } from "./Configuration";
+import { Cell } from "./Cell";
 
 describe("Grid", () => {
   const configuration = {
@@ -25,9 +26,19 @@ describe("Grid", () => {
   it("should check if apple is inside", () => {
     const grid = new Grid(configuration);
 
-    const apples = grid.getApples();
+    const apple = grid.getApples()[0];
 
-    expect(grid.isAppleInside(apples[0])).toBeTruthy();
-    expect(apples.length).toBe(5);
+    expect(grid.isAppleInside(new Cell(apple.x, apple.y))).toBeTruthy();
+    expect(grid.isAppleInside(new Cell(999, 999))).toBeFalsy();
+  });
+
+  it("should remove apple", () => {
+    const grid = new Grid(configuration);
+
+    const apple = grid.getApples()[0];
+    grid.removeApple(apple);
+
+    expect(grid.isAppleInside(apple)).toBeFalsy();
+    expect(grid.getApples().length).toBe(4);
   });
 });

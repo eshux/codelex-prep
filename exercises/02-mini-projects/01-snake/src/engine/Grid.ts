@@ -3,14 +3,20 @@ import { Configuration } from "./Configuration";
 
 export class Grid {
   private configuration: Configuration;
+  apples: Cell[] = [ 
+    new Cell(33, 22),
+    new Cell(35, 22),
+    new Cell(37, 22),
+    new Cell(39, 22),
+    new Cell(41, 22)
+  ]
 
   constructor(configuration: Configuration) {
     this.configuration = configuration;
   }
 
-  apples: {
     
-  }
+  
   seed(): void {}
 
   isAppleInside(cell: Cell): boolean {
@@ -19,19 +25,16 @@ export class Grid {
   
   }
 
-  removeApple(cell: Cell): void {}
+  removeApple(cell: Cell): void {
+    const i = this.apples.findIndex(it => it.x === cell.x && it.y === cell.y);
+    this.apples.splice(i, 1);
+  }
 
   isDone(): boolean {
     return false;
   }
 
   getApples(): Cell[] {
-    return [
-      new Cell(33, 22),
-      new Cell(35, 22),
-      new Cell(37, 22),
-      new Cell(39, 22),
-      new Cell(41, 22)
-    ];
+    return this.apples;
   }
 }
